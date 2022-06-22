@@ -4,12 +4,12 @@ import { VideoPlayer } from '../components/VideoPlayer'
 
 export function Event() {
   return (
-    <>
+    <div className='flex flex-col min-h-screen'>
       <Header />
-      <main className='flex'>
+      <main className='flex flex-1'>
         <VideoPlayer />
         <Sidebar />
       </main>
-    </>
+    </div>
   )
 }
