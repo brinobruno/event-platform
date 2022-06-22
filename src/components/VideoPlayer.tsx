@@ -1,7 +1,7 @@
 export function VideoPlayer() {
   return (
-    <>
-      VideoPlayer
-    </>
+    <div className='flex-1'>
+      Video
+    </div>
   )
 }
