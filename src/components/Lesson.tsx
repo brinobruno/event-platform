@@ -1,26 +1,43 @@
-import { CheckCircle } from 'phosphor-react'
+import { CheckCircle, Lock } from 'phosphor-react'
 
-export function Lesson() {
+interface LessonProps {
+  title: string
+  slug: string
+  availableAt: Date
+  type: 'live' | 'class'
+}
+
+export function Lesson(props: LessonProps) {
+  const isLessonAvailable = false
+
   return (
     <a href="#">
       <span className='text-gray-300'>
-        Tuesday | June 22nd 7pm
+        { props.availableAt.toString() }
       </span>
       
       <div className='rounded border border-gray-500 p-4 mt-2'>
         <header className='flex items-center justify-between'>
-          <span className='text-sm text-blue-500 font-medium flex items-center gap-2'>
-            <CheckCircle size={ 20 } />
-            Content available
+          {isLessonAvailable ? (
+            <span className='text-sm text-blue-500 font-medium flex items-center gap-2'>
+              <CheckCircle size={ 20 } />
+              Content available
+            </span>
+          ) : (
+            <span className='text-sm text-orange-500 font-medium flex items-center gap-2'>
+            <Lock size={ 20 } />
+            Soon
           </span>
+          )}
+
           <span className='text-xs rounded px-2 py-[0.125rem] text-white border
            border-green-300 font-bold'>
-            LIVE
+            { props.type === 'live' ? 'LIVE' : 'CLASS' }
           </span>
         </header>
 
         <strong className='text-gray-200 mt-5 block'>
-          Launch event
+          { props.title }
         </strong>
       </div>
     </a>
