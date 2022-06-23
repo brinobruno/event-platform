@@ -1,7 +1,9 @@
 import { DefaultUi, Player, Youtube } from '@vime/react'
 import { gql, useQuery } from '@apollo/client'
 import { DiscordLogo, Lightning } from 'phosphor-react'
+
 import { ExtraContent } from './ExtraContent'
+import { LoadingVideoPlayer } from './LoadingVideoPlayer'
 
 import '@vime/core/themes/default.css'
 
@@ -47,7 +49,7 @@ export function VideoPlayer(props: VideoProps) {
   if (!data) {
     return (
       <div className='flex-1'>
-        <p>Loading...</p>
+        <LoadingVideoPlayer />
       </div>
     )
   }
