@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        darkbg: 'url(/src/assets/dark-background.jpg)'
+      },
       fontFamily: {
         sans: 'Roboto, sans-serif',
       },
