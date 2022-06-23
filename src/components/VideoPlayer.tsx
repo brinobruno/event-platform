@@ -1,6 +1,7 @@
 import { DefaultUi, Player, Youtube } from '@vime/react'
 import { gql, useQuery } from '@apollo/client'
-import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from 'phosphor-react'
+import { DiscordLogo, Lightning } from 'phosphor-react'
+import { ExtraContent } from './ExtraContent'
 
 import '@vime/core/themes/default.css'
 
@@ -113,47 +114,16 @@ export function VideoPlayer(props: VideoProps) {
           </div>
         </div>
         <div className='gap-8 mt-20 grid grid-cols-2'>
-          <a
-            className='bg-gray-700 rounded overflow-hidden flex items-stretch
-            gap-6 hover:bg-gray-600 transition-colors'
-            href=''
-          >
-            <div className='bg-green-700 h-full p-6 flex items-center'>
-              <FileArrowDown size={ 40 } />
-            </div>
-            <div className='py-6 leading-relaxed'>
-              <strong className='text-2xl'>
-                Complementary material
-              </strong>
-              <p className='text-sm text-gray-200 mt-2'>
-                Access the complementary material to improve your knowledge
-              </p>
-            </div>
-            <div className="h-full p-6 flex items-center">
-              <CaretRight />
-            </div>
-          </a>
-
-          <a
-            className='bg-gray-700 rounded overflow-hidden flex items-stretch
-            gap-6 hover:bg-gray-600 transition-colors'
-            href=''
-          >
-            <div className='bg-green-700 h-full p-6 flex items-center'>
-              <FileArrowDown size={ 40 } />
-            </div>
-            <div className='py-6 leading-relaxed'>
-              <strong className='text-2xl'>
-                Exclusive eBook
-              </strong>
-              <p className='text-sm text-gray-200 mt-2'>
-                Download the exclusive eBook from the event.io
-              </p>
-            </div>
-            <div className="h-full p-6 flex items-center">
-              <CaretRight />
-            </div>
-          </a>
+          <ExtraContent
+            title='Complementary material'
+            description='Access the complementary material to improve your knowledge'
+            slug='#'
+          />
+          <ExtraContent
+            title='Exclusive eBook'
+            description='Download the exclusive eBook from the event.io'
+            slug='#'
+          />
         </div>
       </div>
     </div>
