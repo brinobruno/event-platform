@@ -6,6 +6,7 @@ import { ExtraContent } from './ExtraContent'
 import { LoadingVideoPlayer } from './LoadingVideoPlayer'
 
 import '@vime/core/themes/default.css'
+import { Footer } from './Footer'
 
 const GET_LESSON_BY_SLUG_QUERY = gql`
   query GetLessonBySlug ($slug: String) {
@@ -65,7 +66,7 @@ export function VideoPlayer(props: VideoProps) {
         </div>
       </div>
 
-      <div className='p-8 max-w-[1100px] mx-auto'>
+      <div className='py-8 px-8 max-w-[1100px] mx-auto'>
         <div className='flex items-start gap-16'>
           <div className='flex-1'>
             <h1 className='text-2xl font-bold'>
@@ -128,6 +129,7 @@ export function VideoPlayer(props: VideoProps) {
           />
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
