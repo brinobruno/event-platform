@@ -117,12 +117,12 @@ export function VideoPlayer(props: VideoProps) {
           <ExtraContent
             title='Complementary material'
             description='Access the complementary material to improve your knowledge'
-            slug='#'
+            slug=''
           />
           <ExtraContent
             title='Exclusive eBook'
             description='Download the exclusive eBook from the event.io'
-            slug='#'
+            slug=''
           />
         </div>
       </div>
