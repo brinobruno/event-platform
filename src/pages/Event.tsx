@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { Header } from '../components/Header'
+import { NoLessonNotice } from '../components/NoLessonNotice'
 import { Sidebar } from '../components/Sidebar'
 import { VideoPlayer } from '../components/VideoPlayer'
 
@@ -12,7 +13,7 @@ export function Event() {
       <main className='flex flex-1'>
         { slug
           ? <VideoPlayer lessonSlug={ slug } /> 
-          : <div className='flex-1' /> 
+          : <NoLessonNotice /> 
         }
         <Sidebar />
       </main>
