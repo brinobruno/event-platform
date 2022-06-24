@@ -18,7 +18,7 @@ export function Subscribe() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
 
-  const [createSubscriber] = useMutation(CREATE_SUBSCRIBER_MUTATION)
+  const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION)
 
   async function handleFormSubscription(event: FormEvent) {
     event?.preventDefault()
@@ -78,7 +78,8 @@ export function Subscribe() {
 
             <button
               className='mt-4 bg-green-500 uppercase py-4 rounded font-bold
-              text-sm hover:bg-green-700 transition-colors'
+              text-sm hover:bg-green-700 transition-colors disabled:opacity-50'
+              disabled={ loading }
               type='submit'
             >
               Save my seat
