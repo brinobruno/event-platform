@@ -4,9 +4,9 @@ import { DiscordLogo, Lightning } from 'phosphor-react'
 
 import { ExtraContent } from './ExtraContent'
 import { LoadingVideoPlayer } from './LoadingVideoPlayer'
+import { Footer } from './Footer'
 
 import '@vime/core/themes/default.css'
-import { Footer } from './Footer'
 
 const GET_LESSON_BY_SLUG_QUERY = gql`
   query GetLessonBySlug ($slug: String) {
