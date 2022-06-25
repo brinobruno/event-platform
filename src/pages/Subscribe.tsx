@@ -72,7 +72,7 @@ export function Subscribe() {
             <input
               onChange={ event => setEmail(event.target.value) }
               className='bg-gray-900 rounded px-5 h-14'
-              placeholder='Your email'
+              placeholder='Your email address'
               type="email"
             />
 
